@@ -18,7 +18,7 @@
 <html>
 <head>
 	<title>
-		Login form
+		Sign Up form
 	</title>
 	<style type="text/css">
 
@@ -44,7 +44,7 @@
 </head>
 <body>
 	<div id="loginform">
-		<form action="SaveServlet">
+		<form action="SaveServlet" method="post">
 			<div id="inndiv">
 				<label>Name</label><br>
 				<input type="text" name="name"><br>
@@ -59,10 +59,15 @@
 			</div>
 			<div id="inndiv">	
 				<label>Country</label><br>
-				<input type="text" name="country"><br>
+				<select name="country" style="width:150px">  
+    				<option>&nbsp India</option>  
+    				<option>&nbsp USA</option>  
+    				<option>&nbsp UK</option>  
+    				<option>&nbsp Other</option>
+    			</select>
 			</div>
 			<div id="inndiv">
-				<input id="supb" type="submit" name="signup" value="SignUp">	
+  				<input id="supb" type="submit" name="signup" value="SignUp">
 			</div>
 		</form>
 	</div>

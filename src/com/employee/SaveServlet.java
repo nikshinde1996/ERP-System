@@ -29,12 +29,14 @@ public class SaveServlet extends HttpServlet {
         int status=EmpDBConnection.save(e);  
         if(status>0){  
             out.print("<p>Record saved successfully!</p>");  
-            request.getRequestDispatcher("index.html").include(request, response);  
+            request.getRequestDispatcher("welcome.jsp").include(request, response);  
         }else{  
             out.println("Sorry! unable to save record");  
         }  
           
-        out.close();  
+        out.close();
+       // response.sendRedirect("welcome.jsp");
+ 
     }  
   
 }  

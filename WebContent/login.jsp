@@ -43,7 +43,7 @@
 </head>
 <body>
 	<div id="loginform">
-		<form action="SaveServlet">
+		<form action="welcome.jsp" >
 			<div id="inndiv">
 				<label>Email</label><br>
 				<input type="email" name="email"><br>
