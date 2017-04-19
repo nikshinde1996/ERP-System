@@ -84,7 +84,7 @@ article {
   	<li><a href="index.jsp">Home</a></li>
     <li><a href="loginUser.jsp">Admin Login</a></li>
     <li><a href="loginUser.jsp">Employee Login</a></li>
-    <li><a href="#">Apply</a></li>
+    <li><a href="applreg.jsp">Apply</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Gallery</a></li>
   </ul>

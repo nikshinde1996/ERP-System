@@ -78,7 +78,7 @@ td {
 		<nav>
 			<ul>
 				<li><a href='logout.jsp'>Log out</a></li>
-				<li><a href="EmpPersonalDetails.jsp">Personal Details</a></li>
+				<li><a href="#">Personal Details</a></li>
 				<li><a href="#">Projects</a></li>
 				<li><a href="#">Gallery</a></li>
 				<li><a href="welcomeUser.jsp">My Home</a></li>
@@ -119,7 +119,7 @@ td {
 			%>
 
 			<div>
-				<h1>Pay Slip</h1>
+				<h1>Personal Details</h1>
 			</div>
 			<div id="paytable">
 				<table>
@@ -139,63 +139,11 @@ td {
 						<td><b>Profile</b></td>
 						<td>Software Engineer</td>
 					</tr>
-					<tr>
-						<%
-							double bp = Integer.parseInt(basePay) * Math.random();
-							totalpay += bp;
-						%>
-						<td><b>Base Pay</b></td>
-						<td>Rs. <%=bp%></td>
-					</tr>
-					<tr>
-						<%
-							double r = Integer.parseInt(basePay) * Math.random();
-							totalpay += r;
-						%>
-						<td><b>RSU</b></td>
-						<td>Rs. <%=r%></td>
-					</tr>
-					<tr>
-						<%
-							double b = Integer.parseInt(basePay) * Math.random();
-							totalpay += b;
-						%>
-						<td><b>Bonus</b></td>
-						<td>Rs. <%=b%></td>
-					</tr>
-					<tr>
-						<%
-							double ha = Integer.parseInt(basePay) * Math.random();
-							totalpay += ha;
-						%>
-						<td><b>House Allowance</b></td>
-						<td>Rs. <%=ha%></td>
-					</tr>
-					<tr>
-						<%
-							double f = Integer.parseInt(basePay) * Math.random();
-							totalpay += f;
-						%>
-						<td><b>Food allowance</b></td>
-						<td>Rs. <%=f%></td>
-					</tr>
-					<tr>
-						<%
-							double t = Integer.parseInt(basePay) * Math.random();
-							totalpay -= t;
-						%>
-						<td><b>Tax</b></td>
-						<td>Rs. <%=t%></td>
-					</tr>
-					<tr>
-						<td><b>Total Pay</b></td>
-						<td>Rs. <%=totalpay%></td>
-					</tr>
 				</table>
 			</div>
 			<br>
 			<div>
-				<button id="savepay" onclick="">Download as pdf</button>
+				<button id="savepay" onclick="">Edit</button>
 			</div>
 		</article>
 

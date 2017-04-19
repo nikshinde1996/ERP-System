@@ -59,7 +59,7 @@ article {
 <nav>
   <ul>
     <li><a href='logout.jsp'>Log out</a></li>
-    <li><a href="#">Personal Details</a></li>
+    <li><a href="EmpPersonalDetails.jsp">Personal Details</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Gallery</a></li>
     <li><a href="viewPayslip.jsp">Pay slip</a></li>

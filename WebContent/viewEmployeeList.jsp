@@ -69,7 +69,7 @@ table, td, th{
     <li><a href='logout.jsp'>Log out</a></li>
     <li><a href="#">View Logs</a></li>
     <li><a href="#">View Project</a></li>
-    <li><a href="">Pay slip</a></li>
+    <li><a href="">Edit Pay slip</a></li>
   </ul>
 </nav>
 
@@ -91,6 +91,7 @@ You are not logged in<br/>
     PreparedStatement ps = con.prepareStatement("select * from members");
 	ResultSet rs = ps.executeQuery();
 %>
+
 	<table>
 		<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Username</th><th>Password</th><th>RegDate</th></tr>
 		<%
