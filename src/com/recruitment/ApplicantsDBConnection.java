@@ -32,7 +32,7 @@ public class ApplicantsDBConnection {
 		try {
 			Connection con = ApplicantsDBConnection.getConnection();
 			PreparedStatement ps = con
-					.prepareStatement("insert into ApplicantInfo(name,email,profile,address,mob,country) values (?,?,?,?,?,?)");
+					.prepareStatement("insert into ApplicantsInfo(name,email,profile,address,mob,country) values (?,?,?,?,?,?)");
 			ps.setString(1, e.getName());
 			ps.setString(2, e.getEmail());
 			ps.setString(3, e.getProfile());
@@ -55,7 +55,7 @@ public class ApplicantsDBConnection {
 		try {
 			Connection con = ApplicantsDBConnection.getConnection();
 			PreparedStatement ps = con
-					.prepareStatement("update EmployeeInfo set name =?,email=?,profile=?,address=?,mob=?,country=? where id=?");
+					.prepareStatement("update ApplicantsInfo set name =?,email=?,profile=?,address=?,mob=?,country=? where id=?");
 			ps.setString(1, e.getName());
 			ps.setString(2, e.getEmail());
 			ps.setString(3, e.getProfile());
@@ -78,7 +78,7 @@ public class ApplicantsDBConnection {
 		int status = 0;
 		try {
 			Connection con = ApplicantsDBConnection.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from ApplicantInfo where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from ApplicantsInfo where id=?");
 			ps.setInt(1, id);
 			status = ps.executeUpdate();
 
@@ -95,15 +95,17 @@ public class ApplicantsDBConnection {
 
 		try {
 			Connection con = ApplicantsDBConnection.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from ApplicantInfo where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from ApplicantsInfo where id=?");
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				e.setId(rs.getInt(1));
 				e.setName(rs.getString(2));
-				e.setPassword(rs.getString(3));
-				e.setEmail(rs.getString(4));
-				e.setCountry(rs.getString(5));
+				e.setEmail(rs.getString(3));
+				e.setProfile(rs.getString(4));
+				e.setAddress(rs.getString(5));
+				e.setMob(rs.getInt(6));
+				e.setCountry(rs.getString(7));
 			}
 			con.close();
 		} catch (Exception ex) {
@@ -118,15 +120,17 @@ public class ApplicantsDBConnection {
 
 		try {
 			Connection con = ApplicantsDBConnection.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from ApplicantInfo");
+			PreparedStatement ps = con.prepareStatement("select * from ApplicantsInfo");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				Applicant e = new Applicant();
 				e.setId(rs.getInt(1));
 				e.setName(rs.getString(2));
-				e.setPassword(rs.getString(3));
-				e.setEmail(rs.getString(4));
-				e.setCountry(rs.getString(5));
+				e.setEmail(rs.getString(3));
+				e.setProfile(rs.getString(4));
+				e.setAddress(rs.getString(5));
+				e.setMob(rs.getInt(6));
+				e.setCountry(rs.getString(7));
 				list.add(e);
 			}
 			con.close();

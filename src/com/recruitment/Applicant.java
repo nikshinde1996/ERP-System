@@ -32,8 +32,8 @@ public class Applicant {
 		return profile;
 	}
 
-	public void setPassword(String password) {
-		this.profile = password;
+	public void setProfile(String profile) {
+		this.profile = profile;
 	}
 
 	public String getEmail() {

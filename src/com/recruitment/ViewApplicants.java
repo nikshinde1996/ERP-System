@@ -24,9 +24,9 @@ public class ViewApplicants extends HttpServlet {
 		List<Applicant> list=ApplicantsDBConnection.getAllApplicants();  
        
 		out.print("<table border='1' width='100%'");  
-		out.print("<tr><th>Id</th><th>Name</th><th>Password</th><th>Email</th><th>Country</th><th>Edit</th><th>Delete</th></tr>");  
-		for(Applicant e:list){  
-			out.print("<tr><td>"+e.getId()+"</td><td>"+e.getName()+"</td><td>"+e.getEmail()+"</td><td>"+e.getProfile()+"</td><td>"+e.getAddress()+"</td><td>"+e.getMob()+"</td><td>"+e.getCountry()+"</td><td><a href='EditServlet?id="+e.getId()+"'>edit</a></td><td><a href='DeleteServlet?id="+e.getId()+"'>delete</a></td></tr>");  
+		out.print("<tr><th>Id</th><th>Name</th><th>Email</th><th>Profile</th><th>Address</th><th>Phone no.</th><th>Country</th></tr>");  
+		for(Applicant a:list){  
+			out.print("<tr><td>"+a.getId()+"</td><td>"+a.getName()+"</td><td>"+a.getEmail()+"</td><td>"+a.getProfile()+"</td><td>"+a.getAddress()+"</td><td>"+a.getMob()+"</td><td>"+a.getCountry()+"</td></tr>");  
 		}  
 		out.print("</table>");  
        

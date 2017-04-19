@@ -1,60 +1,80 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ERP Login page</title>
-</head>
-<body>
-	
-</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Login form
-	</title>
-	<style type="text/css">
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
 
-		#loginform{
-			border: 1px solid blue;
-			padding : 5% 3% 3% 10% ;
-			margin :  2% 30% 2% 30% ;
-			float: center;
-		}
-		#inndiv{
-			padding: 3%
-		}
-		.input{
-			padding-right: 3% ;
-		}
-		#lgnb{
-			padding: 3%;
-			padding-right:8%; 
-			padding-left:8%;
-			background-color: #3396FF;
-		}
-		#supb{
-			padding: 3%;
-			padding-left: 8%;
-			padding-right: 8%;
-			background-color: #83FF33;
-		}
-	</style>
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    border: 1px solid gray;
+    padding-bottom:20%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    padding: 0;
+    padding-bottom:5px;
+}  
+nav ul a {
+    text-decoration: none;
+}
+nav ul a:hover{
+	color:green;
+}
+article {
+    margin-left: 170px;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
 </head>
 <body>
-	<div id="loginform">
-		
-			<div id="inndiv">
-				<a href="login.jsp" ><input id="lgnb" type="submit" name="login" value="Login" onclick="login.jsp"></a>
-				<a href="signup.jsp" ><input id="supb" type="submit" name="signup" value="SignUp" onclick="signup.jsp"></a>	
-			</div>
-		
-	</div>
+
+<div class="container">
+
+<header>
+   <h1>Alienage.io</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="loginAdmin.jsp">Admin Login</a></li>
+    <li><a href="loginUser.jsp">Employee Login</a></li>
+    <li><a href="applicantReg.jsp">Apply</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Gallery</a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>Alienage</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+  <p></p>
+</article>
+
+<footer>Copyright &copy; Alienage.io</footer>
+
+</div>
+
 </body>
 </html>
