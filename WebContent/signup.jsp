@@ -60,10 +60,10 @@
 			<div id="inndiv">	
 				<label>Country</label><br>
 				<select name="country" style="width:150px">  
-    				<option>&nbsp India</option>  
-    				<option>&nbsp USA</option>  
-    				<option>&nbsp UK</option>  
-    				<option>&nbsp Other</option>
+    				<option> India</option>  
+    				<option> USA</option>  
+    				<option> UK</option>  
+    				<option> Other</option>
     			</select>
 			</div>
 			<div id="inndiv">

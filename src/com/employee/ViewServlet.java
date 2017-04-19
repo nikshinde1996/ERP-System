@@ -15,7 +15,7 @@ package com.employee;
                    throws ServletException, IOException {  
             response.setContentType("text/html");  
             PrintWriter out=response.getWriter();  
-            out.println("<a href='index.html'>Add New Employee</a>");  
+          
             out.println("<h1>Employees List</h1>");  
               
             List<Employee> list=EmpDBConnection.getAllEmployees();  

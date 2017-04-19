@@ -21,6 +21,6 @@
 		<label>Welcome user</label>
 	</div>
 	<div id="navl">
-		<a href="view_servlet">View Stored Entry</a> 	
+		<a href="ViewServlet">View Stored Entry</a> 	
 	</div>
 </body>
